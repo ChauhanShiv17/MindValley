@@ -59,25 +59,21 @@
                     <span class="login100-form-title p-b-49">
                         Your Details
                     </span>
-
                     <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
                         <span class="label-input100">Username</span>
                         <input class="input100" id="name" type="text" name="username" placeholder="Type your username">
                         <span class="focus-input100" data-symbol="&#xf206;"></span>
                     </div>
-
                     <div class="wrap-input100 validate-input" data-validate="Password is required">
                         <span class="label-input100">Password</span>
                         <input class="input100" type="password" id="password" name="pass" placeholder="Type your password">
                         <span class="focus-input100" data-symbol="&#xf190;"></span>
                     </div>
-
                     <div class="text-right p-t-8 p-b-31">
                         <a href="#">
                             Forgot password?
                         </a>
                     </div>
-
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
                             <div class="login10-form-bgbtn"></div>
@@ -142,47 +138,32 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-    apiKey: "AIzaSyCP_rwoig_4Ds5RabdJ2SX5dxcfDm7bDMg",
-    authDomain: "loginpage-e92d8.firebaseapp.com",
-    projectId: "loginpage-e92d8",
-    storageBucket: "loginpage-e92d8.appspot.com",
-    messagingSenderId: "1025778137",
-    appId: "1:1025778137:web:c2f667150cfc7f1b8379c8",
-    measurementId: "G-8FCRZL6HW1"
-};
+// const firebaseConfig = {
+//     apiKey: "AIzaSyCP_rwoig_4Ds5RabdJ2SX5dxcfDm7bDMg",
+//     authDomain: "loginpage-e92d8.firebaseapp.com",
+//     projectId: "loginpage-e92d8",
+//     storageBucket: "loginpage-e92d8.appspot.com",
+//     messagingSenderId: "1025778137",
+//     appId: "1:1025778137:web:c2f667150cfc7f1b8379c8",
+//     measurementId: "G-8FCRZL6HW1"
+// };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
-import { getDatabase, ref, set }
-    from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+// import { getDatabase, ref, set }
+//     from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 
-const db = getDatabase();
-let name = document.getElementById('name');
-let password = document.getElementById('password');
+// const db = getDatabase();
+// let name = document.getElementById('name');
+// let password = document.getElementById('password');
 
-let login = document.getElementById('login');
-login.addEventListener("click", async (e) => {
-    e.preventDefault();
-    console.log("tushi");
-    await set(ref(db, "User's name is: " + name.value), {
-        name: name.value,
-        password: password.value,
-    })
-        .then(() => {
-            alert("data stored successfully");
-        })
-        .catch((error) => {
-            alert("unsuccessful, error" + error);
-        });
-})
-
-// login.onclick = function (e) {
+// let login = document.getElementById('login');
+// login.addEventListener("click", async (e) => {
 //     e.preventDefault();
 //     console.log("tushi");
-//     set(ref(db, "User's name is: " + name.value), {
+//     await set(ref(db, "User's name is: " + name.value), {
 //         name: name.value,
 //         password: password.value,
 //     })
@@ -192,7 +173,9 @@ login.addEventListener("click", async (e) => {
 //         .catch((error) => {
 //             alert("unsuccessful, error" + error);
 //         });
-// }
+// })
+
+
     </script>
 
 </body>

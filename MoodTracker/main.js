@@ -40,24 +40,19 @@ let currentMoodArray = [0,0,0,0,0]
 let countMood = 0
 let moodBoard = []
 let moodRow = []
-
 for(let i=1; i<=thisMonthsNumberOfDays; i++){
 	let moodId = 0
 	moodRow = []
 	let gridContainer = document.createElement('div')
 	gridContainer.className = 'grid-container justify-content-center'
 	gridContainer.id = 'gridContainer-'+i
-	
 	let blockRowDate = document.createElement('div')
 	blockRowDate.id = `blockRowDate-${i}`
 	blockRowDate.appendChild(document.createTextNode(i))
-	
 	// append element to gridContainer
 	gridContainer.appendChild(blockRowDate)
 	for(let j=1; j<=12; j++){
-		
 		let gridItem = document.createElement('div')
-		
 		gridItem.setAttribute('title',`${ord(i)} of ${nameOfMonth}`);
 		if(j<4 && i<day){
 			moodId = random(3,5)
@@ -126,16 +121,16 @@ let ratio4 = document.getElementById('ratio-4').textContent = '(' + currentMoodA
 // JOURNALS
 let journals = [
 	{	
-		date: '22/01',
+		date: '02/04',
 		title: 'First Journal',
 		mood: 'Nice',
 		content: `Because we will submit the project today`
 	},
 	{	
-		date: '28/01',
+		date: '03/04',
 		title: 'NIT Kkr',
 		mood: 'Amazing',
-		content: `Final Round Guys`
+		content: `Scripting project`
 	}
 ]
 
